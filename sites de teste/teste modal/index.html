@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href=" https://fonts.cdnfonts.com/css/matura-mt-script-capitals " rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./styles/styles.css">
+    <title>teste modal</title>
+    <link rel="shortcut icon" href="./assets/icon/favicon.svg" type="image/x-icon">
+</head>
+
+<body>
+    <section id="prod">
+        <div class="container">
+            <div class="text">
+                <h2>MARCENARIA</h2>
+                <p>Produtos duráveis e personalizados através da marcenaria artesanal</p>
+            </div>
+            <div class="seta">
+                <img src="./assets/icon/seta.svg" alt="" class="swiper-button-prev1">
+                <img src="./assets/icon/seta.svg" alt="" class="swiper-button-next1">
+            </div>
+            <div id="car">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div data-produtos="caminhao_grande" class="swiper-slide">
+                            <img src="./assets/img-prod/caminhão grande.jpg" alt="">
+                            <div class="cont">
+                                <h3>Caminhão Grande</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </p>
+                            </div>
+                        </div>
+                        <div data-produtos="barco" class="swiper-slide">
+                            <img src="./assets/img-prod/barco.jpg" alt="">
+                            <div class="cont">
+                                <h3>Barco</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </p>
+                            </div>
+                        </div>
+                        <div data-produtos="opala" class="swiper-slide">
+                            <img src="./assets/img-prod/opala.jpg" alt="">
+                            <div class="cont">
+                                <h3>Opala</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </p>
+                            </div>
+                        </div>
+                        <div data-produtos="aviao" class="swiper-slide">
+                            <img src="./assets/img-prod/aviao.jpg" alt="">
+                            <div class="cont">
+                                <h3>Avião</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </p>
+                            </div>
+                        </div>
+                        <div data-produtos="fusca" class="swiper-slide">
+                            <img src="./assets/img-prod/fusca.jpg" alt="">
+                            <div class="cont">
+                                <h3>Fusca</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </p>
+                            </div>
+                        </div>
+                        <div data-produtos="caroboi" class="swiper-slide">
+                            <img src="./assets/img-prod/carro-de-boi-com-barco.jpg" alt="">
+                            <div class="cont">
+                                <h3>Carro de boi</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </p>
+                            </div>
+                        </div>
+                        <div data-produtos="opalasom" class="swiper-slide">
+                            <img src="./assets/img-prod/opala-com-som.jpg" alt="">
+                            <div class="cont">
+                                <h3>Opala com som</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </p>
+                            </div>
+                        </div>
+                        <div data-produtos="suporte_not" class="swiper-slide">
+                            <img src="./assets/img-prod/suporte-notebook.jpg" alt="">
+                            <div class="cont">
+                                <h3>Suporte para notebook</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="modal_container" class="modal-container" data-active="false">
+        <div class="modal">
+            <div class="text">
+                <h2>Barco</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum temporibus incidunt sunt quam amet
+                    nostrum, totam voluptas neque distinctio, quisquam ut labore assumenda ex pariatur optio porro
+                    voluptates autem sed!</p>
+            </div>
+            <div id="fechar" class="fechar">
+                <div class="btn-x"></div>
+                <div class="btn-x"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="https://w.behold.so/widget.js" type="module"></script>
+<script src="../script/car.js"></script>
+<script src="./script/prod.js"></script>
+<script type="text/javascript" src="../script/vanilla-tilt.js"></script>
+<script>VanillaTilt.init(document.querySelectorAll(".card,.swiper-slide"), { max: 25, speed: 400, glare: true, "max-glare": .7, });</script>
+
+</html>

@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+section{
+    height: 100vh;
+    overflow: hidden;
+    background: #000;
+    p{
+        position: relative;
+        font-size: 1.5em;
+        letter-spacing: -0.05em;
+        line-height: 0.5em;
+        background: url(../img/David.png), url(../img/David.png);
+        background-position: center;
+        background-blend-mode: color-dodge;
+        background-attachment: fixed;
+        background-size: cover;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }   
+}
+@media(max-width: 800px){
+    section{
+        p{
+            font-size: 12px;
+        }
+    }
+}

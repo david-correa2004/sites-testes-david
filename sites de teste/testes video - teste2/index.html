@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>teste video vertical</title>
+</head>
+<body>
+    <section id="home">
+        <div class="container">
+            <div class="btn">
+                <a href="./index-video2.html">
+                    <button>Video horizontal</button>
+                </a>
+            </div>
+            <div class="video">
+                <div class="cont-after"></div>
+                <video id="video-fundo" muted loop width="100" style="height: 283;" autoplay>
+                    <source src="./assets/videos/Vídeo do WhatsApp de 2023-11-07 à(s) 12.04.36_7a1e1ed8.mp4">
+                    <object data="" width="320" height="240">
+                        <embed width="320" height="240" src="Yes Bank Advertisment.mp4">
+                    </object>
+                </video>
+                <video id="video" muted width="100" style="height: 283;">
+                    <source src="./assets/videos/Vídeo do WhatsApp de 2023-11-07 à(s) 12.04.36_7a1e1ed8.mp4">
+                    <object data="" width="320" height="240">
+                        <embed width="320" height="240" src="Yes Bank Advertisment.mp4">
+                    </object>
+                </video>
+                <div class="banner" id="mutedd">
+                    <h3 id="h3">Seu video já começou</h3>
+                    <img id="img" src="./assets/icon/muted.svg"/>
+                    <p id="p">Clique para ouvir</p>
+                </div>
+                <div id="barra">
+                    <div id="barra-progresso"></div>
+                </div>
+            </div>
+            <div class="btn" id="btn2">
+                <button>Teste2</button>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="./script/video.js"></script>
+</html>

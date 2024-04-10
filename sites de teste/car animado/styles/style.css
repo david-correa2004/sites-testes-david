@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  background: rgba(0, 0, 0, 0.6901960784);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 2rem 0;
+  padding: 0 10%;
+}
+#container .text {
+  width: 30%;
+  height: 10%;
+  display: grid;
+  place-items: center;
+  background: rgba(0, 0, 0, 0.4039215686);
+  box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.75), 10px 50px 70px rgba(0, 0, 0, 0.25), inset 5px 5px 10px rgba(0, 0, 0, 0.5), inset 5px 5px 20px rgba(255, 255, 255, 0.2), inset -5px -5px 15px rgba(0, 0, 0, 0.75);
+  border-top: 8px solid rgba(255, 255, 255, 0.4039215686);
+  border-radius: 0 0 10px 10px;
+  margin-top: 1%;
+}
+#container .text h1 {
+  color: rgba(255, 255, 255, 0.4039215686);
+}
+#container #car {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  padding: 0 5%;
+  position: relative;
+  height: 200px;
+  display: grid;
+  place-items: center;
+  background: rgba(0, 0, 0, 0.4039215686);
+  box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.75), 10px 50px 70px rgba(0, 0, 0, 0.25), inset 5px 5px 10px rgba(0, 0, 0, 0.5), inset 5px 5px 20px rgba(255, 255, 255, 0.2), inset -5px -5px 15px rgba(0, 0, 0, 0.75);
+  border-top: 8px solid rgba(255, 255, 255, 0.4039215686);
+  border-radius: 0 0 10px 10px;
+  opacity: 0.5;
+  transition: 1.5s ease;
+  cursor: pointer;
+}
+#container #car p {
+  color: #fff;
+  font-size: 14px;
+  width: 70%;
+}
+
+@media (max-width: 800px) {
+  #container .text {
+    width: 60%;
+  }
+}/*# sourceMappingURL=style.css.map */

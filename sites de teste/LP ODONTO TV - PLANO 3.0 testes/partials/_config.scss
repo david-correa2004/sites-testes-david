@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    resize: none;
+    outline: none;
+    list-style: none;
+    text-decoration: none;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: cover !important;
+    object-fit: cover;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+section{
+    display: grid;
+    place-items: center;
+    height: fit-content;
+    padding: 5% 0;
+    background: #1D1D1C;
+    margin-top: -1px;
+}
+.container{
+    width: 80%;
+}
+a{
+    width: fit-content;
+}
+button{
+    background: #1D1D1B;
+    font-size: 16px;
+    width: 228px;
+    height: 51px;
+    border-radius: 50px;
+    border: none;
+    transition: all .75s ease;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+    &:hover {
+        transform: scale(0.95);
+        box-shadow: 0px 3px 6px #0000000D;
+    }
+}
+h1{
+    font-size: 30px;
+    color: #fff;
+    font-weight: 600;
+}
+h2{
+    color: #fff;
+    font-size: 26px;
+    font-weight: 700;
+}
+p{
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+
+::-webkit-scrollbar{
+    background-color: #1D1D1C;
+    width: 12px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #008DFF;
+    border-radius: 10px;
+}
+@media(max-width: 800px){
+    section{
+        padding: 10% 0;
+    }
+    h2{
+        font-size: 20px;
+    }
+    p{
+        font-size: 14px;
+    }
+}
+
+$color1: #1D1D1C;
+$color2: #008DFF;
+$color3: #fff;
+$color4: #2F2F2E;
+$color5: #197AD8;
+$color6: #C7C7C7;
+$color7: #00F280;
+$color8: #F2F2F2;
+$color9: #89CBFF;

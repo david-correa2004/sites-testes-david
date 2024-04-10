@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    resize: none;
+    outline: none;
+    list-style: none;
+    text-decoration: none;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: cover !important;
+    object-fit: cover;
+    font-family: 'Manrope', sans-serif;
+}
+
+body{
+    background: #f4e9ff;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+section{
+    display: grid;
+    place-items: center;
+    height: fit-content;
+    padding: 5% 0;
+    background: #f4e9ff;
+}
+.container{
+    width: 80%;
+}
+button{
+    background: #4b1c72;
+    font-size: 14px;
+    width: 165px;
+    height: 40px;
+    border-radius: 30px;
+    border: none;
+    transition: all .75s ease;
+    color: #fff;
+    font-weight: 400;
+    cursor: pointer;
+    &:hover {
+        transform: scale(0.9);
+        box-shadow: 0px 3px 3px #00000017;
+    }
+}
+h2{
+    color: #4c1c72;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+p{
+    font-size: 15px;
+    font-weight: 400;
+}
+
+
+::-webkit-scrollbar{
+    background-color: #4c1c72;
+    width: 12px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #EA94BF;
+    border-radius: 10px;
+}
+@media(max-width: 800px){
+    .container{
+        width: 85%;
+    }
+    h2{
+        font-size: 20px;
+    }
+    p{
+        font-size: 13px !important;
+    }
+    button{
+        &:hover{
+            transform: none;
+            border-radius: 9px;
+        }
+    }
+}
+
+$color1: #4c1c72;
+$color2: #f4e9ff;
+$color3: #fff;
+$color4: #a06dd1;
+$color5: #977a50;
+$color6: #ead48b;
+$color7: #848588;

@@ -1,0 +1,307 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: -1px 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway";
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+section {
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 5% 0;
+}
+
+button {
+  margin: 8% 0 0;
+  width: 112px;
+  height: 34px;
+  color: #fff;
+  background: linear-gradient(196deg, rgba(2, 2, 83, 0.6941176471), rgba(19, 19, 187, 0.6941176471), rgba(2, 2, 83, 0.6941176471));
+  border: 0;
+  border-radius: 9px;
+  transition: 0.8s;
+  position: relative;
+  z-index: 2;
+}
+button::after {
+  content: "";
+  position: absolute;
+  display: flex;
+  height: 100%;
+  width: 0;
+  top: 0;
+  left: 0;
+  background: aqua;
+  border-radius: 9px;
+  z-index: -1;
+  transition: 0.5s;
+  opacity: 0;
+}
+button:hover {
+  cursor: pointer;
+  transform: scale(0.95);
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.0901960784);
+  padding: 8px 15px;
+  border: 1px solid #D8C191;
+  background: transparent;
+  color: #020202;
+}
+button:hover::after {
+  width: 100%;
+}
+
+.button {
+  background: linear-gradient(345deg, #684934, #b49a7d, #684934);
+}
+
+#teste-html ::-webkit-scrollbar {
+  background-color: #10333f;
+  width: 12px;
+}
+#teste-html ::-webkit-scrollbar-thumb {
+  background-color: #f5f5f5;
+  border-radius: 10px;
+}
+
+@keyframes animar {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+header {
+  background-color: transparent;
+  width: 80%;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  top: 0;
+  left: 9%;
+  height: 15%;
+  border-radius: 0;
+  display: flex;
+  transition: all 0.3s ease-in;
+  z-index: 99;
+}
+header[data-active=true] {
+  background: #10333f;
+  top: 3%;
+  border-radius: 20px;
+}
+header nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header nav .cont {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+header nav .cont .logo {
+  width: 80px;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+header nav .cont .logo img {
+  width: 100%;
+}
+header nav .cont .icon {
+  width: 8%;
+  text-align: end;
+  cursor: pointer;
+}
+header nav .cont .icon svg {
+  width: 25px;
+  height: 25px;
+  margin: 0 3%;
+  transition: all 0.3s ease-in;
+}
+header nav .cont .icon svg:hover {
+  transform: scale(0.9);
+}
+header nav .cont ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style-type: none;
+  align-items: center;
+  gap: 0 2rem;
+}
+header nav .cont ul a {
+  color: #fff;
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  padding: 5px 0px;
+  transition: all 0.5s ease;
+  opacity: 0.8;
+  position: relative;
+  width: 100px;
+}
+header nav .cont ul a::after {
+  content: "";
+  position: absolute;
+  display: flex;
+  width: 0%;
+  height: 0%;
+  border: 1.5px solid #fff;
+  border-right: transparent;
+  border-top: transparent;
+  bottom: 0;
+  left: 0;
+  transition: all 0.5s ease;
+  opacity: 0;
+}
+header nav .cont ul a::before {
+  content: "";
+  position: absolute;
+  display: flex;
+  width: 0%;
+  height: 0%;
+  border: 1.5px solid #fff;
+  border-left: transparent;
+  border-bottom: transparent;
+  top: 0;
+  right: 0;
+  transition: all 0.5s ease;
+  opacity: 0;
+}
+header nav .cont ul a:hover::after {
+  width: 98%;
+  height: 95%;
+  opacity: 1;
+}
+header nav .cont ul a:hover::before {
+  width: 98%;
+  height: 95%;
+  opacity: 1;
+}
+header nav .cont ul .active {
+  color: #fff;
+  opacity: 1;
+}
+header nav .cont ul .active:hover {
+  color: #fff;
+}
+header nav .cont ul .active::after {
+  width: 98%;
+  height: 95%;
+  opacity: 1;
+}
+header nav .cont ul .active::before {
+  width: 98%;
+  height: 95%;
+  opacity: 1;
+}
+
+@media (max-width: 800px) {
+  header {
+    display: none;
+  }
+}
+#home {
+  background: #0f4456;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  /*&::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(196deg, #02025362, #1313bb62, #02025362);
+      z-index: 0;
+  }*/
+}
+#home .container {
+  width: 100%;
+}
+#home .container .text {
+  width: 100%;
+}
+#home .container .text h1 {
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 70px;
+  font-size: bold;
+  cursor: pointer;
+  position: relative;
+  color: transparent;
+  -webkit-text-stroke: 0.8px transparent;
+  background-image: url(../assets/img/caminhao.jpg);
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-position: -33rem 0;
+  transition: 2s ease;
+  animation: animate_h1 6s linear infinite;
+  animation-delay: 2s;
+  line-height: 3rem;
+}
+#home .container .text h1:hover {
+  animation: none;
+  background-position: center;
+}
+
+section {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+section .container {
+  display: grid;
+  place-items: center;
+}
+section .container .text {
+  display: grid;
+  place-items: center;
+}
+section .container .text h2 {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+#sobre {
+  background: #f5f5f5;
+}
+
+#prod {
+  background: #0f4456;
+}
+#prod h2 {
+  color: #fff;
+}
+
+@keyframes animate_h1 {
+  0% {
+    background-position: -33rem 0;
+  }
+  10% {
+    background-position: -33rem 0;
+  }
+  65% {
+    background-position: center;
+  }
+  85% {
+    background-position: center;
+  }
+  100% {
+    background-position: -33rem 0;
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: -1px 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Raleway";
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+body{
+    background: #021525;
+}
+.btn{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    place-items: center;
+    gap: 0 1rem;
+}
+button{
+    width: 150px;
+    height: 40px;
+    border-radius: 9px;
+    position: relative;
+    display: grid;
+    place-items: center;
+    border: none;
+    transition: all .5s ease;
+    cursor: pointer;
+    &:hover{
+        transform: scale(.9)
+    }
+}
+@import "../partials/teste-video1";
+@import "../partials/teste-video2";
+@import "../partials/testevideo-3";

@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+  resize: none;
+  outline: none;
+  list-style: none;
+  text-decoration: none;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: cover !important;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow: hidden !important;
+}
+
+#tv {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5% 0 0;
+  background: #1d1d1c;
+  position: relative;
+  overflow: hidden;
+}
+#tv .container {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem 0;
+}
+#tv .container .logo {
+  width: 10%;
+  height: auto;
+  display: grid;
+  place-items: center;
+}
+#tv .container .logo img {
+  width: 100%;
+  height: auto;
+}
+#tv .container .img {
+  width: 70%;
+}
+#tv .container .img .video {
+  position: relative;
+  border-radius: 9px;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+#tv .container .img .video #lazyframe {
+  width: 100%;
+  height: 22rem;
+  border-radius: 9px;
+  display: grid;
+  place-items: center;
+  transition: all 0.5s ease;
+}
+#tv .container .img .video #lazyframe.filter {
+  filter: grayscale(1);
+}
+#tv .container .img .video #lazyframe.filter:hover {
+  filter: grayscale(0);
+}
+#tv .container .img .video #lazyframe span {
+  display: none;
+}
+#tv .container .img .video #lazyframe iframe {
+  width: 100%;
+  height: 100%;
+}
+#tv .container .img .video .btn-play {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  display: grid;
+  place-items: center;
+  z-index: 3;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.0862745098);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  border-radius: 50px;
+}
+#tv .container .img .video .btn-play img {
+  width: 40%;
+}
+
+@media (max-width: 800px) {
+  #tv {
+    padding: 15% 0 0;
+  }
+  #tv .container {
+    width: 80%;
+  }
+  #tv .container .logo {
+    width: 50px;
+  }
+  #tv .container .img {
+    width: 100%;
+  }
+  #tv .container .img .video #lazyframe {
+    height: 170px;
+  }
+  #tv .container .img .video .btn-play {
+    width: 60px;
+    height: 60px;
+  }
+}/*# sourceMappingURL=style.css.map */

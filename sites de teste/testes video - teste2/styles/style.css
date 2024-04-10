@@ -1,0 +1,280 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: -1px 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway";
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+body {
+  background: #021525;
+}
+
+button {
+  width: 150px;
+  height: 40px;
+  border-radius: 9px;
+  position: relative;
+  display: grid;
+  place-items: center;
+  border: none;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+button:hover {
+  transform: scale(0.9);
+}
+
+#home {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+#home .container {
+  width: 80%;
+  display: grid;
+  place-items: center;
+  gap: 2rem 0;
+}
+#home .container .video {
+  width: 30%;
+  height: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#home .container .video .cont-after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+#home .container .video #video-fundo {
+  display: block;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  z-index: 5;
+  opacity: 1;
+}
+#home .container .video #video {
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+#home .container .video .banner {
+  position: absolute;
+  width: 60%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+  background: rgba(255, 0, 0, 0.4039215686);
+  transition: all 0.5s ease;
+  border: 2px solid #00ffff;
+  border-radius: 9px;
+  opacity: 1;
+  gap: 1rem 0;
+  cursor: pointer;
+}
+#home .container .video .banner img {
+  width: 50px;
+  transition: all 0.5s ease;
+  position: relative;
+}
+#home .container .video .banner h3, #home .container .video .banner p {
+  color: #fff;
+  text-align: center;
+  font-weight: 500;
+}
+#home .container .video #barra {
+  position: absolute;
+  bottom: -1px;
+  height: 10px;
+  width: 100%;
+  background: transparent;
+}
+#home .container .video #barra #barra-progresso {
+  width: 0%;
+  height: 100%;
+  background: #00ffff;
+  transition: all 0.5s ease;
+}
+#home .container #btn2 {
+  display: none;
+  z-index: 5;
+  bottom: 25%;
+  left: 5%;
+  animation: animate-btn 0.8s linear infinite;
+}
+#home .container #btn2 button {
+  background: #ff0000;
+  width: 80px;
+  height: 30px;
+}
+
+@keyframes animate-btn {
+  0% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.9);
+  }
+}
+@media (max-width: 800px) {
+  #home .container .video {
+    width: 100%;
+  }
+  #home .container .video .banner {
+    height: 50%;
+    width: 60%;
+    padding: 0 5%;
+  }
+  #home .container .video .banner h3 {
+    font-size: 15px;
+  }
+  #home .container .video .banner p {
+    font-size: 13px;
+  }
+}
+#home2 {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+#home2 .container {
+  width: 80%;
+  display: grid;
+  place-items: center;
+  gap: 2rem 0;
+}
+#home2 .container .video {
+  width: 60%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#home2 .container .video .cont-after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+#home2 .container .video #video-fundo {
+  display: block;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  z-index: 5;
+  opacity: 1;
+}
+#home2 .container .video #video {
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+#home2 .container .video .banner {
+  position: absolute;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0 5%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  background: rgba(242, 105, 67, 0.4039215686);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  transition: all 0.5s ease;
+  border: 2px solid #fff;
+  border-radius: 9px;
+  opacity: 1;
+  gap: 1rem 0;
+  z-index: 6;
+  cursor: pointer;
+}
+#home2 .container .video .banner img {
+  width: 20%;
+  animation: animar 5.5s linear infinite;
+  transition: all 0.5s ease;
+  position: relative;
+}
+#home2 .container .video .banner h3 {
+  color: #fff;
+  text-align: center;
+  font-weight: 700;
+  font-size: 24px;
+}
+#home2 .container .video .banner p {
+  color: #fff;
+  text-align: center;
+  font-weight: 700;
+  font-size: 22px;
+}
+#home2 .container .video #barra {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  height: 10px;
+  width: 99.2%;
+  background: transparent;
+}
+#home2 .container .video #barra #barra-progresso {
+  width: 0%;
+  height: 100%;
+  background: #00ffff;
+  transition: all 0.5s ease;
+}
+#home2 .container .btn2 {
+  display: none;
+  z-index: 5;
+  bottom: 5%;
+  left: 5%;
+}
+#home2 .container .btn2 button {
+  background: #1DA02F;
+  color: #fff;
+  font-weight: 700;
+  width: 200px;
+  height: 50px;
+  font-size: 18px;
+}
+
+@media (max-width: 800px) {
+  #home2 .container .video {
+    width: 100%;
+  }
+  #home2 .container .video .banner {
+    width: 60%;
+    padding: 0 5%;
+  }
+  #home2 .container .video .banner h3 {
+    font-size: 15px;
+  }
+  #home2 .container .video .banner p {
+    font-size: 13px;
+  }
+}/*# sourceMappingURL=style.css.map */

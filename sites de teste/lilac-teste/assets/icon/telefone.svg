@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="18.203" height="18.65" viewBox="0 0 18.203 18.65">
+  <g id="Page-1" transform="translate(-0.112 0.414)">
+    <g id="Artboard" transform="translate(1.112 1)">
+      <g id="phone-forwarded" transform="translate(0)">
+        <path id="Shape" d="M17,0l3.1,3.1L17,6.206" transform="translate(-3.9)" fill="none" stroke="#fff"
+          stroke-linecap="round" stroke-linejoin="round" stroke-width="2" fill-rule="evenodd" />
+        <path id="Shape-2" data-name="Shape" d="M13,4h6.206" transform="translate(-3.003 -0.897)" fill="none"
+          stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" fill-rule="evenodd" />
+        <path id="Shape-3" data-name="Shape"
+          d="M15.539,12.573V14.9a1.551,1.551,0,0,1-1.691,1.551,15.351,15.351,0,0,1-6.694-2.381A15.126,15.126,0,0,1,2.5,9.416,15.351,15.351,0,0,1,.118,2.691,1.551,1.551,0,0,1,1.662,1H3.989A1.551,1.551,0,0,1,5.54,2.334a9.955,9.955,0,0,0,.543,2.18,1.551,1.551,0,0,1-.349,1.637l-.985.985A12.411,12.411,0,0,0,9.4,11.79l.985-.985a1.551,1.551,0,0,1,1.637-.349A9.954,9.954,0,0,0,14.2,11a1.551,1.551,0,0,1,1.334,1.575Z"
+          transform="translate(-0.112 -0.224)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"
+          stroke-width="2" fill-rule="evenodd" />
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,107 @@
+#insta{
+    background: #f4e9ff;
+    .container{
+        width: 100%;
+        display: grid;
+        place-items: center;
+        height: fit-content;
+        gap: 3rem 0;
+        .text{
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            gap: 1rem 0;
+            img{
+                width: 30.66px;
+                height: 30.66px;
+            }
+            h2{
+                font-weight: 600;
+            }
+        }
+        #car{
+            width: 60vw;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .mySwiper-insta{
+                width: 100%;
+                .swiper-wrapper{
+                    display: flex;
+                    align-items: end;
+                    .swiper-slide{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        text-align: center;
+                        padding: 3% 2% 5%;
+                        // border: 3px solid $color3;
+                        border: 3px solid #97466E29;
+                        position: relative;
+                        border-radius: 19px;
+                        img{
+                            width: 100%;
+                        }
+                        .img{
+                            position: absolute;
+                            bottom: 3%;
+                            width: 80%;
+                        }
+    
+                    }
+                }
+            }
+            .seta-mob{
+                display: none;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                gap: 0 1.5rem;
+                .swiper-button-prev-insta, .swiper-button-next-insta{
+                    width: 49px;
+                    height: 50px;
+                    cursor: pointer;
+                    border-radius: 9px;
+                }
+                .swiper-button-prev-insta{
+                    transform: rotateY(180deg);
+                }
+            }
+        }
+    }
+}
+@media(max-width: 800px){
+    #insta{
+        padding: 10% 0;
+        .container{
+            flex-direction: column;
+            gap: 4rem 0;
+            .text{
+                width: 75%;
+            }
+            #car{
+                width: 70vw;
+                .mySwiper-insta{
+                    .swiper-wrapper{
+                        .swiper-slide{
+                            padding: 8% 5% 15%;
+                        }
+                    }
+                }
+                .seta{
+                    display: none;
+                }
+                .seta-mob{
+                    padding: 20% 0 0;
+                    display: flex;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background: #1b1b1b;
+}
+
+section{
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+.video{
+    display: grid;
+    place-items: center;
+    position: relative;
+}
+
+.progress-container {
+    width: 100%;
+    height: fit-content;
+    position: absolute;
+    bottom: 0;
+    z-index: 9;
+    /* background-color: #ddd; */
+}
+
+.progress-bar {
+    width: 0%;
+    height: 10px;
+    background-color: #4caf50;
+}

@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.relogio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: rgba(0, 0, 0, 0.6901960784);
+  padding: 0 3%;
+}
+.relogio .fus-hor {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+  width: 100%;
+}
+.relogio .fus-hor h1 {
+  color: rgba(255, 255, 255, 0.4039215686);
+  margin-bottom: 10px;
+  display: flex;
+  padding: 10px 20px;
+  font-size: 2em;
+  font-weight: 600;
+  border: transparent;
+  border-radius: 40px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5), inset 5px 5px 20px rgba(255, 255, 255, 0.2), inset -5px -5px 20px rgba(0, 0, 0, 0.75);
+}
+.relogio .container {
+  width: 95%;
+  position: relative;
+  background: rgba(0, 0, 0, 0.4039215686);
+  min-height: 500px;
+  border-top-left-radius: 225px;
+  border-top-right-radius: 225px;
+  box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.75), 10px 50px 70px rgba(0, 0, 0, 0.25), inset 5px 5px 10px rgba(0, 0, 0, 0.5), inset 5px 5px 20px rgba(255, 255, 255, 0.2), inset -5px -5px 15px rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* relogio digital*/
+}
+.relogio .container .clock {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  background: rgba(0, 0, 0, 0.4039215686);
+  border-radius: 50%;
+  box-shadow: 10px 50px 70px rgba(0, 0, 0, 0.25), inset 5px 5px 10px rgba(0, 0, 0, 0.5), inset 5px 5px 20px rgba(255, 255, 255, 0.2), inset -5px -5px 15px rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.relogio .container .clock::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #1f1f1f;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  z-index: 1000000;
+}
+.relogio .container .clock .circle {
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  border: 2px solid rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.relogio .container .clock .circle::before {
+  content: "";
+  position: absolute;
+  top: -8.5px;
+  width: 15px;
+  height: 15px;
+  background: var(--crl);
+  border-radius: 50%;
+  box-shadow: 0 0 20px var(--crl), 0 0 60px var(--crl);
+}
+.relogio .container .clock .circle:nth-child(1) i {
+  width: 2px;
+}
+.relogio .container .clock .circle:nth-child(2) i {
+  width: 6px;
+}
+.relogio .container .clock .circle:nth-child(3) i {
+  width: 2px;
+}
+.relogio .container .clock .circle i {
+  position: absolute;
+  width: 6px;
+  height: 50%;
+  background: var(--crl);
+  opacity: 0.75;
+  transform-origin: bottom;
+  transform: scale(0.5);
+}
+.relogio .container .clock .circle1 {
+  z-index: 10;
+}
+.relogio .container .clock .circle2 {
+  width: 220px;
+  height: 220px;
+  z-index: 9;
+}
+.relogio .container .clock .circle3 {
+  width: 160px;
+  height: 160px;
+  z-index: 8;
+}
+.relogio .container .clock span {
+  position: absolute;
+  inset: 20px;
+  color: #fff;
+  text-align: center;
+  transform: rotate(calc(30deg * var(--i)));
+}
+.relogio .container .clock span b {
+  font-size: 2em;
+  opacity: 0.25;
+  font-weight: 600;
+  display: inline-block;
+  transform: rotate(calc(-30deg * var(--i)));
+}
+.relogio .container #time {
+  width: 70%;
+  margin-bottom: 40px;
+  display: flex;
+  padding: 10px 20px;
+  margin-left: 15%;
+  font-size: 2em;
+  font-weight: 600;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  border-radius: 40px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5), inset 5px 5px 20px rgba(255, 255, 255, 0.2), inset -5px -5px 20px rgba(0, 0, 0, 0.75);
+}
+.relogio .container #time div {
+  position: relative;
+  width: 60px;
+  text-align: center;
+  font-weight: 500;
+  color: var(--crl);
+}
+.relogio .container #time div:nth-child(1)::after, .relogio .container #time div:nth-child(2)::after {
+  content: ":";
+  position: absolute;
+  right: -4px;
+  top: -3px;
+}
+.relogio .container #time div:nth-child(2)::after {
+  animation: animate 1s steps(1) infinite;
+}
+.relogio .container #time div:last-child {
+  font-size: 0.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}/*# sourceMappingURL=styles.css.map */

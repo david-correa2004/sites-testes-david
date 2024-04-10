@@ -1,0 +1,109 @@
+#home {
+    background: url(../assets/img/home.jpg);
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    gap: 6rem 0;
+    // &::after{
+    //     content: ('');
+    //     position: absolute;
+    //     display: block;
+    //     width: 100%;
+    //     height: 100%;
+    //     top: 0;
+    //     right: 0;
+    //     background: #0E0E0E;
+    //     opacity: .5;
+    //     z-index: 1;
+    //     transition: all .5s ease;
+    // }
+    // &:hover{
+    //     &::after{
+    //         opacity: 0;
+    //     }
+    // }
+    .container{
+        z-index: 2;
+    }
+    .text {
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        gap: 1.5rem 0;
+        p{
+            opacity: .8;
+            font-weight: 400;
+        }
+        button{
+            width: 316px;
+            background: linear-gradient(90deg, $color2, $color9);
+        }
+    }
+    .btn-flut {
+        height: 50px;
+        width: 50px;
+        position: fixed;
+        z-index: 9;
+        bottom: 10%;
+        right: -5%;
+        display: grid;
+        place-items: center;
+        transition: all 0.4s ease-in;
+        z-index: 9;
+        cursor: pointer;
+        &:hover {
+            transform: scale(0.9);
+        }
+        &[data-active="true"] {
+            right: 5%;
+        }
+        img {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 8;
+        }
+    }
+}
+@media (max-width: 800px) {
+    #home {
+        background: url(../assets/img/home-mob.jpg);
+        height: 100vh;
+        display: flex;
+        width: 100%;
+        position: relative;
+        background-size: cover;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        position: relative;
+        .container{
+            height: 100%;
+            .text {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                text-align: center;
+                height: 45%;
+                gap: .5rem 0;
+                h1 {
+                    width: 100%;
+                    font-size: 24px;
+                }
+            }
+        }
+        .btn-flut{
+            display: none;
+        }
+    }
+}

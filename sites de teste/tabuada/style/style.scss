@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+header{
+    border-radius: 0 0 50% 50%;
+    position: fixed;
+    width: 100%;
+    height: 10vh;
+    background: #00076dcf;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 5px 5px 10px #00000080,
+    inset 5px 5px 20px #ffffff33,
+    inset -5px -5px 20px #000000bf;
+    h1{
+        color: #ffffff9e;
+    }
+}
+section{
+    width: 100%;
+    height: 100vh;
+    background: #000012b2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .container{
+        height: fit-content;
+        width: fit-content;
+        padding: 5% ;
+        background: #00065494;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem 0;
+        box-shadow: 5px 5px 10px #00000080,
+        inset 5px 5px 20px #ffffff33,
+        inset -5px -5px 20px #000000bf;
+        border-radius: 10px;
+        input{
+            height: 1.5rem;
+            background: #ffffff54;
+            box-shadow: 5px 5px 10px #00000080,
+            inset 5px 5px 20px #ffffff33,
+            inset -5px -5px 20px #000000bf;
+            border: none;
+            border-radius: 5px;
+            color: #ffffff9e;
+        }
+        select{
+            height: 2em;
+            background: #ffffff54;
+            box-shadow: 5px 5px 10px #00000080,
+            inset 5px 5px 20px #ffffff33,
+            inset -5px -5px 20px #000000bf;
+            border: none;
+            padding: 0;
+            border-radius: 5px;
+            option{
+                padding: .5rem .2rem .2rem;
+                border-radius: 5px;
+                box-shadow: 5px 5px 10px #00000052,
+                inset 5px 5px 20px #ffffff2a,
+                inset -5px -5px 20px #00000052;
+                border-bottom: 1px solid #000000bf;
+
+            }
+            
+        }
+        #btn{
+            padding: 0 2%;
+        }
+        .teste{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 0 1rem;
+            p{
+                color: #ffffff9e;
+            }
+        }
+    }
+}
+footer{
+    position: fixed;
+    width: 100%;
+    height: 5vh;
+    bottom: 0;
+    background: #00076dcf;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 5px 5px 10px #00000080,
+    inset 5px 5px 20px #ffffff33,
+    inset -5px -5px 20px #000000bf;
+    p{
+        color: #ffffff9e;
+    }
+}

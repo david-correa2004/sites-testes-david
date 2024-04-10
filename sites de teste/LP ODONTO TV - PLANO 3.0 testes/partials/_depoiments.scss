@@ -1,0 +1,199 @@
+#depoiments {
+    .container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        place-items: center;
+        gap: 2rem 0;
+        .text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: .5rem 0;
+            text-align: center;
+            h2 {
+                width: 100%;
+            }
+            p {
+                width: 100%;
+                opacity: 0.8;
+            }
+        }
+        #car {
+            width: 80vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            .mySwiper-mob {
+                display: none;
+            }
+            .mySwiper-dep {
+                width: 100%;
+                .swiper-wrapper {
+                    width: 100%;
+                    position: relative;
+                    .swiper-slide {
+                        display: grid;
+                        place-items: center;
+                        background: $color3;
+                        text-align: center;
+                        // border-radius: 29px;
+                        height: 400px;
+                        width: 100%;
+                        border-radius: 29px;
+                        padding: 1% 0;
+                        gap: 1rem 0;
+                        overflow: hidden;
+                        opacity: 1;
+                        position: relative;
+                        &::after {
+                            content: ('');
+                            position: absolute;
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                            background: #000;
+                            opacity: .25;
+                        }
+                        .video {
+                            width: 90%;
+                            height: 280px;
+                            border-radius: 29px;
+                            video {
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                        h3 {
+                            color: $color2;
+                            font-size: 20px;
+                        }
+                        p {
+                            margin-top: -2%;
+                            color: $color1;
+                            opacity: 0.5;
+                        }
+
+                        &.swiper-slide-active {
+                            opacity: 1;
+                            transform: scale(1);
+                            &::after{
+                                display: none;
+                            }
+                        }
+                        &.swiper-slide-next {
+                            transform: scale(0.5);
+                            position: relative;
+                            opacity: 1;
+                            z-index: -1;
+                        }
+                    }
+                }
+            }
+        }
+        .pagination {
+            .swiper-pagination-dep {
+                .swiper-pagination-bullet {
+                    background: $color3;
+                }
+            }
+        }
+        .pagination-mob {
+            display: none;
+        }
+    }
+}
+@media (max-width: 800px) {
+    #depoiments {
+        place-items: center;
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 3rem 0;
+            place-items: center;
+            .text {
+                width: 80%;
+                align-items: center;
+                text-align: center;
+                gap: 1.2rem 0;
+                h2 {
+                    width: 100%;
+                    font-size: 20px;
+                }
+                p {
+                    width: 90%;
+                    font-size: 14px;
+                }
+            }
+            #car {
+                width: 80vw;
+                .mySwiper-dep {
+                    display: none;
+                }
+                .mySwiper-mob {
+                    display: flex;
+                    .swiper-wrapper {
+                        .swiper-slide {
+                            display: grid;
+                            place-items: center;
+                            background: $color3;
+                            text-align: center;
+                            // border-radius: 29px;
+                            height: 350px;
+                            width: 100%;
+                            border-radius: 29px;
+                            padding: 5% 0;
+                            gap: 1rem 0;
+                            overflow: hidden;
+                            opacity: 1;
+                            .video {
+                                width: 90%;
+                                height: 220px;
+                                border-radius: 29px;
+                                position: relative;
+                                img{
+                                    position: absolute;
+                                    width: 100%;
+                                    height: 100%;
+                                    z-index: -1;
+                                    top: 0;
+                                }
+                                video {
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                            }
+                            h3 {
+                                color: $color2;
+                                font-size: 20px;
+                            }
+                            p {
+                                margin-top: -2%;
+                                color: $color1;
+                                opacity: 0.5;
+                            }
+                        }
+                    }
+                }
+                .seta {
+                    display: none;
+                }
+            }
+            .pagination {
+                display: none;
+            }
+            .pagination-mob {
+                display: block;
+                .swiper-pagination-mob {
+                    .swiper-pagination-bullet {
+                        background: $color3;
+                    }
+                }
+            }
+        }
+    }
+}

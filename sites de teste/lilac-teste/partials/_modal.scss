@@ -1,0 +1,115 @@
+#modal_container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000099;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s ease;
+
+    &[data-active=true]{
+        opacity: 1;
+        visibility: visible;
+
+        .modal {
+            margin-top: 0;
+            opacity: 1;
+        }
+    }
+    .modal{
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background-color: $color1;
+        z-index: 999;
+        width: 70%;
+        height: 70%;
+        max-width: 80%;
+        border-radius: 20px;
+        display: flex;
+        overflow: hidden;
+        transition: all .3s ease-out;
+        margin-top: 2rem;
+        gap: 0 4rem;
+        img{
+            width: 100%;
+            border-radius: 20px 0 0 20px;
+        }
+        .fechar{
+            width: 4%;
+            height: 10%;
+            background-color: transparent;
+            position: absolute;
+            top: 5%;
+            right: 0;
+            cursor: pointer;
+            .btn-x{
+                width: 20px;
+                height: 2px;
+                background: #fff;
+                position: relative;
+                transform: rotateZ(-45deg);
+                &:nth-child(2){
+                    bottom: 2.5%;
+                    transform: rotateZ(45deg);
+                }
+            }
+        }
+        .text{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            gap: 1.5rem 0;
+            h2{
+                color: $color3;
+            }
+            p{
+                width: 85%;
+                font-size: 15px;
+                line-height: 1.3rem;
+                color: $color3;
+            }
+        }
+    }
+}
+@media(max-width: 800px){
+    #modal_container{
+        .modal{
+            flex-direction: column;
+            width: 90%;
+            height: fit-content;
+            img{
+                width: 100%;
+                height: 30vh;
+                object-fit: cover;
+                border-radius: 0;
+            }
+            .fechar{
+                width: 6%;
+                position: absolute;
+                padding: 0;
+                top: 4%;
+                right: 5%;
+                .btn-x{
+                    width: 23px;
+                    background: $color3;
+                    border-radius: 5px;
+                    border: 1px solid $color4;
+                }
+            }
+            .text{
+                padding: 8%;
+                h2{
+                    text-align: center;
+                    width: 100%;
+                    padding-top: 5%;
+                }
+            }
+        }
+    }
+}

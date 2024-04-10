@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+    margin: -1px 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Raleway";
+    object-fit: cover;
+    text-decoration: none;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+section {
+    height: fit-content;
+    display: grid;
+    place-items: center;
+    padding: 5% 0;
+    background: #202021;
+}
+.container{
+    width: 80%;
+}
+
+::-webkit-scrollbar{
+    background: #1b1b1b;
+    width: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background: #f1f1f1;
+    // background-color: #0000ea;
+    width: 15px;
+    border-radius: 10px;
+}h2{
+    font-size: 28px;
+}
+button {
+    width: 112px;
+    height: 34px;
+    color: #fff;
+    background: transparent;
+    border: 1.3px solid #fff;
+    border-radius: 9px;
+    transition: 0.8s;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+
+    &::after {
+        content: ("");
+        position: absolute;
+        display: block;
+        height: 100%;
+        width: 0%;
+        top: 0;
+        left: 0;
+        background: #fff;
+        transition: all 0.5s ease;
+        border-radius: 9px;
+        z-index: -1;
+    }
+
+    &:hover {
+        transform: scale(0.95);
+        border: 1.3px solid transparent;
+        &::after {
+            width: 100%;
+        }
+    }
+}
+.button {
+    &::after{
+        background: #fff;
+    }
+    &:hover{
+        color: #000;
+        font-weight: 500;
+    }
+}
+
+$color1: #644e30;
+$color2: #fff;
+$color3: #202021;
+
+
+
+@keyframes animar {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

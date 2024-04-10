@@ -1,0 +1,92 @@
+header{
+  display: flex;
+  justify-content: end;
+  align-items: start;
+  width: 100%;
+  height:13vh;
+  background-color: transparent;
+  position: absolute;
+  z-index: 10;
+  .icon{
+    width: 100%;
+    padding-left: 5%;
+    img{
+      width: 100px;
+      height: 100px;
+    }
+  }
+  .menu{
+      position: fixed;
+      width: 280px;
+      height: 280px;
+      display: flex;
+      justify-content: center;
+      align-items: start;
+      padding-top: 1%;
+
+      
+
+      li{
+          position: absolute;
+          width: 60px;
+          height: 60px;
+          list-style: none;
+          left: calc(50% - 30px);
+          transition: .5s;
+          transform: rotate(0);
+          transition: calc(.5s * var(--i));
+          visibility: hidden;
+          display: grid;
+          place-items: center;
+          border-radius: 50%;
+          transition: .5s;
+          &:hover{
+            background-color:  var(--clr);
+              box-shadow: 0 0 10px var(--clr),
+              0 0 30px var(--clr),
+              0 0 50px var(--clr);
+
+          }
+          img{
+              height: 70%;
+              width: 70%;
+              transform: rotate(calc(120deg / 3 * var(--i)));
+              color: #fff;
+              align-items: center;
+              cursor: pointer;
+
+          }
+      }
+      .toggle{
+        position: absolute;
+          width: 60px;
+          height: 60px;
+          background-color: transparent;
+          color: #fff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border: 2px solid #fff;
+          border-radius: 50%;
+          cursor: pointer;
+          font-size: 2rem;
+          z-index: 10;
+          transition: .5s;
+          &:hover{
+            background-color: #fff;
+            color: blue;
+          }
+      }
+  }
+  .menu.active{
+    li{
+      transform-origin: 140px;
+      transform: rotate(calc(-120deg / 3 * var(--i)));
+      left: 0;
+      visibility: visible;
+    }
+      .toggle{
+          transform: rotate(315deg)
+      }
+  }
+}

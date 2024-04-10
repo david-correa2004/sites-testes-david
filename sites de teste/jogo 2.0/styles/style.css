@@ -1,0 +1,195 @@
+* {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#jogo {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+}
+#jogo .container {
+  width: 100%;
+  height: 98%;
+  position: relative;
+  background: linear-gradient(180deg, #0a0af0, rgba(37, 113, 255, 0.9882352941));
+  border-bottom: 20px solid #F5C005;
+}
+#jogo .container .nuvem {
+  position: absolute;
+  top: 2%;
+  width: 50vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  animation: nuvem 15s infinite linear;
+  z-index: 5;
+}
+#jogo .container .nuvem:nth-child(2) {
+  width: 60vw;
+  top: 5%;
+  animation: nuvem2 20s infinite linear;
+  z-index: 3;
+  right: 5%;
+}
+#jogo .container .nuvem:nth-child(3) {
+  width: 70vw;
+  top: 3%;
+  animation: nuvem3 30s infinite linear;
+  z-index: 1;
+  right: 10%;
+}
+#jogo .container .pedra {
+  width: 100px;
+  position: absolute;
+  bottom: -5%;
+  right: -100px;
+  animation: pedra 3s infinite linear;
+}
+#jogo .container .jogador {
+  position: absolute;
+  width: 130px;
+  bottom: 0;
+  transform: rotateY(180deg);
+}
+#jogo .container .jogadorr {
+  display: none;
+  position: absolute;
+  width: 130px;
+  bottom: 0;
+  transform: rotateY(180deg);
+}
+#jogo .container .jump {
+  animation: jump 500ms ease-out;
+}
+#jogo .container .passaro {
+  position: absolute;
+  width: 100px;
+  animation: passaro 9s infinite linear;
+  top: 40%;
+  transform: rotateY(180deg);
+  z-index: 2;
+}
+#jogo .container .passaro2 {
+  position: absolute;
+  width: 100px;
+  animation: passaro 7s infinite linear;
+  top: 30%;
+  transform: rotateY(180deg);
+  z-index: 4;
+}
+#jogo .container .passaro3 {
+  position: absolute;
+  width: 100px;
+  animation: passaro 5s infinite linear;
+  top: 20%;
+  transform: rotateY(180deg);
+  z-index: 6;
+}
+#jogo .container .passaror {
+  position: absolute;
+  width: 120px;
+  animation: passaror 2.5s infinite linear;
+  top: 20%;
+  transform: rotateY(180deg);
+  z-index: 6;
+}
+
+@keyframes jump {
+  0% {
+    bottom: 0;
+  }
+  40% {
+    bottom: 180px;
+  }
+  50% {
+    bottom: 180px;
+  }
+  60% {
+    bottom: 180px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+@keyframes roda {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+@keyframes game-over {
+  from {
+    width: 100px;
+    height: 100px;
+    opacity: 1;
+  }
+  to {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    opacity: 0;
+  }
+}
+@keyframes pedra {
+  0% {
+    right: -100px;
+  }
+  100% {
+    right: 100vw;
+  }
+}
+@keyframes nuvem {
+  0% {
+    right: -50vw;
+  }
+  100% {
+    right: 100vw;
+  }
+}
+@keyframes nuvem2 {
+  0% {
+    right: -60vw;
+  }
+  100% {
+    right: 100vw;
+  }
+}
+@keyframes nuvem3 {
+  0% {
+    right: -70vw;
+  }
+  100% {
+    right: 100vw;
+  }
+}
+@keyframes passaro {
+  0% {
+    right: -100px;
+  }
+  100% {
+    right: 100vw;
+  }
+}
+@keyframes passaror {
+  0% {
+    right: -120px;
+    top: 5%;
+    transform: rotateY(180deg);
+  }
+  10% {
+    top: 0;
+  }
+  75% {
+    top: 500px;
+  }
+  100% {
+    top: 480px;
+    right: 100vw;
+    transform: rotateY(180deg);
+  }
+}/*# sourceMappingURL=style.css.map */

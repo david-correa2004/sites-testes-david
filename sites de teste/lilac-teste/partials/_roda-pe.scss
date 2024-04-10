@@ -1,0 +1,41 @@
+
+footer {
+    width: 100%;
+    height: fit-content;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    padding: 2% 0 1%;
+    background: $color2;
+    .container {
+        display: grid;
+        place-items: center;
+        gap: 1.5rem 0;
+        img {
+            width: 15%;
+        }
+        .copyrights {
+            display: grid;
+            place-items: center;
+            text-align: center;
+            .copy {
+                display: flex;
+                align-items: center;
+                gap: 0 0.5rem;
+                font-size: 0.45rem;
+                opacity: 1;
+                color: #000;
+                svg {
+                    width: 0.75rem;
+                    height: 0.75rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 64rem) {
+    footer .container img {
+        width: 40%;
+    }
+}

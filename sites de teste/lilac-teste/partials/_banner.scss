@@ -1,0 +1,68 @@
+#dentista-em-florianopolis{
+    background: url(../assets/img/dentista-em-florianopolis.jpg);
+    padding: 10% 0;
+    .container{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        .text{
+            position: relative;
+            left: 10%;
+            width: 45%;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem 0;
+            h2{
+                color: $color3;
+            }
+            p{
+                color: $color3;
+                font-weight: 500;
+                line-height: 1.5rem;
+            }
+            button{
+                background: $color3;
+                color: $color1;
+                font-weight: 600;
+            }
+        }
+    }
+}
+@media (max-width: 800px){
+    #dentista-em-florianopolis{
+        background: url(../assets/img/dentista-em-florianopolis-mob.jpg);
+        height: 100vh;
+        .container{
+            width: 85%;
+            justify-content: center;
+            align-items: start;
+            .text{
+                gap: 1rem;
+                width: 100%;
+                left: 0;
+                top: 0;
+                align-items: center;
+                h2{
+                    font-size: 18px;
+                }
+                p{
+                    line-height: 1.3rem;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 376px){
+    #dentista-em-florianopolis{
+        background: url(../assets/img/dentista-em-florianopolis-mob-se.jpg);
+        height: 110vh;
+        .container{
+            .text{
+                top: 3%;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vídeo do YouTube</title>
+</head>
+<body>
+
+<!-- Div para conter o vídeo -->
+<div id="player"></div>
+
+<script>
+  // Crie um <script> para carregar a API do YouTube
+  // Substitua o ID do vídeo (depois de "videoId:") pelo ID do vídeo do YouTube que você deseja incorporar
+  // Substitua o valor de "player" pelo ID que você deseja para o player
+  // Mais parâmetros e opções podem ser encontrados na documentação da API do YouTube
+  var tag = document.createElement('script');
+  tag.src = 'https://www.youtube.com/iframe_api';
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+  // Função para criar o player após a API ser carregada
+  var player;
+  function onYouTubeIframeAPIReady() {
+    player = new YT.Player('player', {
+      videoId: 'LZLBgv-ZApE', // Substitua este ID pelo ID do vídeo do YouTube desejado
+      playerVars: {
+        'autoplay': 1,
+        'controls': 1,
+        'rel': 0,
+        'showinfo': 0
+      },
+      events: {
+        'onReady': onPlayerReady,
+        'onStateChange': onPlayerStateChange
+      }
+    });
+  }
+
+  function onPlayerReady(event) {
+    event.target.playVideo(); // Inicia o vídeo automaticamente quando estiver pronto
+  }
+
+  function onPlayerStateChange(event) {
+    // Você pode adicionar lógica para lidar com mudanças de estado do player, se desejar
+  }
+</script>
+
+</body>
+</html>

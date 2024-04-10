@@ -1,0 +1,356 @@
+* {
+    background-position: center !important;
+    background-size: cover !important;
+}
+body {
+    background: #f1f1f1;
+    transition: all 0.4s ease-in;
+}
+#test {
+    padding: 1% 0;
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    .btn-tema {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 0 2.5rem;
+        background: #1d1d1d;
+        width: 20px;
+        height: 20px;
+        padding: 8px;
+        border-radius: 50px;
+        position: relative;
+        border: 1px solid #f1f1f1;
+        cursor: pointer;
+        img {
+            height: 90%;
+            width: auto;
+            z-index: 1;
+        }
+        .lua{
+            display: none;
+            opacity: 0;
+        }
+        .boll {
+            position: absolute;
+            height: 30px;
+            width: 30px;
+            background: #f1f1f1;
+            border-radius: 50px;
+            left: 5px;
+            color: #ffe6696c;
+        }
+    }
+    .cont-btns {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 0 1rem;
+        .btn {
+            &[data-active="true"] {
+                button {
+                    background: #1d1d1b;
+                    color: #f1f1f1;
+                }
+            }
+            &[data-active="false"] {
+                button {
+                    background: #f1f1f1;
+                    color: #1d1d1d;
+                    opacity: .5;
+                }
+            }
+            button {
+                width: 100px;
+                height: 30px;
+                font-weight: 500;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: all 0.4s ease-in;
+                &:hover {
+                    transform: scale(0.95);
+                }
+            }
+        }
+    }
+    .container {
+        width: 99vw;
+        height: 100%;
+        display: none;
+        grid-template-columns: repeat(2, 1fr);
+        position: relative;
+        &[data-active="true"] {
+            animation: animate 0.6s linear;
+            display: grid;
+        }
+        .text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .swiper-pagination1 {
+                width: 60%;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                place-items: center;
+                gap: 1rem;
+                z-index: 9;
+                .swiper-pagination-bullet {
+                    display: grid;
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 9px;
+                    opacity: 1;
+                    position: relative;
+                    transition: all 0.5s ease-in;
+                    filter: grayscale(80%);
+                    &:hover {
+                        filter: grayscale(0%);
+                        transform: scale(1.1);
+                    }
+                    &:nth-child(1) {
+                        background: url(../assets/img/opala.jpg);
+                    }
+                    &:nth-child(2) {
+                        background: url(../assets/img/fusca.jpg);
+                    }
+                    &:nth-child(3) {
+                        background: url(../assets/img/barco.jpg);
+                    }
+                    &:nth-child(4) {
+                        background: url(../assets/img/caminhao.jpg);
+                    }
+                    &:nth-child(5) {
+                        background: url(../assets/img/aviao.jpg);
+                    }
+                    &:nth-child(6) {
+                        background: url(../assets/img/carro-de-boi-com-barco.jpg);
+                    }
+                }
+            }
+            .swiper-pagination2 {
+                width: 60%;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                place-items: center;
+                gap: 1rem;
+                z-index: 9;
+                .swiper-pagination-bullet {
+                    display: grid;
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 9px;
+                    opacity: 1;
+                    position: relative;
+                    transition: all 0.5s ease-in;
+                    filter: grayscale(80%);
+                    &:hover {
+                        filter: grayscale(0%);
+                        transform: scale(1.1);
+                    }
+                    &:nth-child(1) {
+                        background: url(../assets/img/robo3.jpg);
+                    }
+                    &:nth-child(2) {
+                        background: url(../assets/img/cara-robo.jpg);
+                    }
+                    &:nth-child(3) {
+                        background: url(../assets/img/robo3.jpg);
+                    }
+                    &:nth-child(4) {
+                        background: url(../assets/img/cara-robo.jpg);
+                    }
+                }
+            }
+            h2 {
+                color: #1d1d1b;
+            }
+        }
+        #car {
+            width: 35vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .mySwiper2 {
+                .swiper-wrapper {
+                    .swiper-slide {
+                        &.swiper-slide-active {
+                            .flip-container {
+                                .flipper {
+                                    .front {
+                                        height: 80% !important;
+                                        width: 60%;
+                                    }
+                                    .back {
+                                        width: 60%;
+                                        height: 80%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .swiper {
+                width: 100%;
+                height: 80%;
+                position: relative;
+                .swiper-wrapper {
+                    display: flex;
+                    align-items: center;
+                    .swiper-slide {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        text-align: start;
+                        height: 100%;
+                        box-shadow: none;
+                        gap: 1rem 0;
+                        border-radius: 10px;
+                        img {
+                            height: 100%;
+                            width: 100%;
+                        }
+                        &.swiper-slide-active {
+                            .flip-container {
+                                .flipper {
+                                    .front {
+                                        width: 60%;
+                                        height: 60%;
+                                    }
+                                }
+                            }
+                        }
+                        .flip-container {
+                            transition: all 0.5s ease-in;
+                            width: 100%;
+                            height: 100%;
+                            perspective: 1000px;
+                            &[data-active="true"] {
+                                .flipper {
+                                    transform: rotatez(180deg);
+                                    .front {
+                                        opacity: 0;
+                                    }
+                                    .back {
+                                        opacity: 1;
+                                        p,
+                                        h3 {
+                                            transition: all 0.5s ease-in;
+                                            animation: texto 1s linear;
+                                        }
+                                    }
+                                }
+                            }
+                            .flipper {
+                                width: 100%;
+                                height: 100%;
+                                transition: transform 1s;
+                                transform-style: preserve-3d;
+                                position: relative;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
+                                .front,
+                                .back {
+                                    position: absolute;
+                                    width: 60%;
+                                    height: 60%;
+                                    backface-visibility: hidden;
+                                    border-radius: 10px;
+                                }
+                                .front {
+                                    width: 55%;
+                                    height: 55%;
+                                    transition: all 0.5s ease-in;
+                                    align-items: center;
+                                    display: flex;
+                                    cursor: pointer;
+                                    z-index: 2;
+                                    img {
+                                        height: 100%;
+                                        width: 100%;
+                                        object-fit: cover;
+                                        border-radius: 10px;
+                                        transition: all 0.5s ease-in;
+                                        &:hover {
+                                            transform: scale(0.95);
+                                        }
+                                    }
+                                }
+                                .back-claro{
+                                    box-shadow:
+                                    inset 5px 5px 10px #ffffff80,
+                                    inset 5px 5px 20px #ffffff33,
+                                    inset -5px -5px 15px #ffffffbf;
+
+                                }
+                                .back {
+                                    // opacity: 0;
+                                    transform: rotatez(180deg);
+                                    padding: 5%;
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: center;
+                                    align-items: center;
+                                    gap: 0.7rem 0;
+                                    z-index: 1;
+                                    background: #1d1d1b;
+                                    border: 1px solid #f1f1f1;
+                                    h3 {
+                                        font-size: 18px;
+                                        width: 80%;
+                                        color: #f1f1f1;
+                                    }
+                                    p {
+                                        color: #f1f1f1;
+                                        width: 80%;
+                                        font-size: 12px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes animate {
+    0% {
+        display: none;
+        opacity: 0;
+        left: -100vw;
+    }
+    20% {
+        display: grid;
+        opacity: 0;
+    }
+    100% {
+        display: grid;
+        opacity: 1;
+        left: 0;
+    }
+}
+@keyframes texto {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

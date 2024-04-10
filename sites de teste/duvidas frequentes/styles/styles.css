@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+  resize: none;
+  outline: none;
+  list-style: none;
+  text-decoration: none;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: cover !important;
+  -o-object-fit: cover;
+     object-fit: cover;
+  font-family: "Raleway";
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 80%;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 5% 0;
+  background-color: #115d34;
+}
+
+button {
+  background-color: #ba2c21;
+  font-size: 15px;
+  width: 172px;
+  height: 44px;
+  border-radius: 9px;
+  border: none;
+  transition: all 0.75s ease;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+}
+button:hover {
+  transform: scale(0.95);
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.0901960784);
+}
+
+h2 {
+  color: #fff;
+  font-size: 25px;
+}
+
+p {
+  font-size: 18px;
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  background-color: #115d34;
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #c1a369;
+  border-radius: 10px;
+}
+
+.seta-mob {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  section {
+    padding: 10% 0;
+  }
+  button:hover {
+    transform: scale(1);
+    background-color: #ba2c21;
+    color: #fff;
+    border-bottom: none;
+  }
+  h2 {
+    font-size: 20px;
+  }
+}
+#doubts {
+  background: #ffffff;
+}
+#doubts .container {
+  display: grid;
+  place-items: center;
+  gap: 4rem 0;
+}
+#doubts .container .text {
+  width: 45%;
+  text-align: center;
+  display: grid;
+  gap: 0.5rem 0;
+}
+#doubts .container .text h2 {
+  color: #115d34;
+}
+#doubts .container .text p {
+  color: #707070;
+}
+#doubts .container .duvidas {
+  width: 100%;
+  display: grid;
+  place-items: center;
+  gap: 1rem 0;
+}
+#doubts .container .duvidas #cont-doubts {
+  width: 80%;
+  height: 81px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(193, 164, 105, 0.5058823529);
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+  padding: 3% 0;
+  gap: 0.5rem 0;
+}
+#doubts .container .duvidas #cont-doubts[data-active=true] {
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 3% 0;
+  cursor: auto;
+}
+#doubts .container .duvidas #cont-doubts[data-active=true] img {
+  transform: rotateZ(180deg);
+  top: 10%;
+}
+#doubts .container .duvidas #cont-doubts[data-active=true] p {
+  display: flex;
+  animation: animate 1s linear;
+}
+#doubts .container .duvidas #cont-doubts img {
+  position: absolute;
+  right: 5%;
+  transition: all 0.4s ease-in;
+}
+#doubts .container .duvidas #cont-doubts h5 {
+  width: 80%;
+  font-size: 18px;
+  font-weight: 600;
+  color: #707070;
+}
+#doubts .container .duvidas #cont-doubts p {
+  width: 80%;
+  font-size: 15px;
+  color: #707070;
+  display: none;
+}
+
+@keyframes animate {
+  0% {
+    display: flex;
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@media (max-width: 800px) {
+  #doubts .container .text {
+    width: 100%;
+  }
+  #doubts .container .text p {
+    font-size: 15px;
+  }
+  #doubts .container .duvidas #cont-doubts {
+    width: 100%;
+    padding: 5% 0;
+  }
+  #doubts .container .duvidas #cont-doubts[data-active=true] {
+    padding: 5% 0;
+  }
+  #doubts .container .duvidas #cont-doubts h5 {
+    font-size: 15px;
+  }
+  #doubts .container .duvidas #cont-doubts p {
+    font-size: 14px;
+  }
+}/*# sourceMappingURL=styles.css.map */
